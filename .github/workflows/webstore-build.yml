@@ -1,1 +1,29 @@
+# This is Build work flow
+
+name: Webstore-build
+
+on:
+    workflow_dispatch:
+
+jobs: 
+    build:
+        name: "Build and Publish our app"
+        runs-on: ubuntu-latest
+
+        steps: 
+           - name: checkout
+             uses: actions/checkout@v3.5.3
+
+           - name: restore
+             run: dotnet restore
+
+           - name: build
+             run: dotnet build --configuration Release
+
+           - name: publish
+             run: dotnet publish --configuration Release
+
+
+
+
 
