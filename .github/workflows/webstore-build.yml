@@ -14,14 +14,14 @@ jobs:
            - name: checkout
              uses: actions/checkout@v4.2.2
 
-           # - name: restore
-           #   run: dotnet restore
+           - name: restore
+             run: dotnet restore
 
-           # - name: build
-           #   run: dotnet build --configuration Release
+           - name: build
+             run: dotnet build --configuration Release
 
-           # - name: publish
-           #   run: dotnet publish --configuration Release
+           - name: publish
+             run: dotnet publish --configuration Release
 
 
 
